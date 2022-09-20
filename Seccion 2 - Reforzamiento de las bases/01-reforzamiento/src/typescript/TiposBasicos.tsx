@@ -1,14 +1,17 @@
 export const TiposBasicos = () => {
 
-    let nombre : string | number = 'Fernando';
-    nombre = 123;
+    const nombre: string = 'Daniel';
+    const edad: number = 35;
+    const isActive: boolean = false;
+
+    const poderes: string[] = ['Velocidad', 'Volar', 'Respirar en el agua'];
 
     return (
         <>
             <h3>TIpos Basicos</h3>
-            {
-                nombre
-            }
+            { nombre }, { edad }, { (isActive) ? 'Activo' : 'No activo' }
+            <br />
+            { poderes.join(', ')}
         </>
     )
 }
