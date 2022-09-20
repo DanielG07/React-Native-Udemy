@@ -1,5 +1,5 @@
 import { type } from "@testing-library/user-event/dist/type"
-import { useReducer } from "react"
+import { useEffect, useReducer } from "react"
 
 interface AuthState {
   validando: boolean,
@@ -21,19 +21,47 @@ type AuthAction = {
 
 const authReducer = ( state: AuthState, action: AuthAction ): AuthState => {
 
+  switch (action.type) {
+    case 'logout':
+      return {
+        validando: false,
+        token: null,
+        nombre: '',
+        username: ''
+      }
+  
+    default:
+      return state
+  }
+
 }
 
 export const Login = () => {
 
-  const [state, dispatch] = useReducer(authReducer, initialState)
+  const [{ validando }, dispatch] = useReducer(authReducer, initialState)
 
-  return (
-    <>
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch( {type: 'logout'} )
+    }, 1500);
+  
+  }, [])
+  
+  if( validando ) {
+    return (
+      <>
         <h3>Login</h3>
 
         <div className="alert alert-info">
           Validando...
         </div>
+      </>
+    )
+  }
+
+  return (
+    <>
+        <h3>Login</h3>
 
         <div className="alert alert-danger">
           No autenticado
