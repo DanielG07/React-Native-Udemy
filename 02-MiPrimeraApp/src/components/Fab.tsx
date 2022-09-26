@@ -2,19 +2,21 @@ import React from 'react'
 import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 
 interface Props {
-    title: string
+    title: string,
+    position?: 'br' | 'bl',
+    onPress: () => void, 
 }
 
-export const Fab = ({ title }: Props) => {
+export const Fab = ({ title, onPress, position = 'br' }: Props) => {
   return (
     <TouchableOpacity 
-                onPress={() => console.log("Click")} 
-                style={ styles.fabLocationBL }
-            >
-                <View style={ styles.fab }>
-                    <Text style={ styles.fabText }>{ title }</Text>
-                </View>
-            </TouchableOpacity>
+        onPress={ onPress  } 
+        style={ styles.fabLocationBR }
+        >
+            <View style={ styles.fab }>
+                <Text style={ styles.fabText }>{ title }</Text>
+            </View>
+    </TouchableOpacity>
   )
 }
 

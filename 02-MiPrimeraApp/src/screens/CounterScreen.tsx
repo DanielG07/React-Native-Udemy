@@ -11,7 +11,15 @@ export const CounterScreen = () => {
             <Text style={ styles.title }>Contador: {contador}</Text>
 
             <Fab
-                title='+1 '
+                title='+1'
+                position='br'
+                onPress={ () => setContador( contador + 1 )}
+            />   
+
+            <Fab
+                title='-1'
+                position='bl'
+                onPress={ () => setContador( contador - 1 )}
             />            
 
         </View>
