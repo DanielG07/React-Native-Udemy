@@ -14,22 +14,20 @@ export const FlexScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        flexDirection: 'row-reverse',
         backgroundColor: '#29C4D9'
     },
     caja1: {
-        flex: 1,
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30
     },
     caja2: {
-        flex: 5,
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30
     },
     caja3: {
-        flex: 1,
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30
