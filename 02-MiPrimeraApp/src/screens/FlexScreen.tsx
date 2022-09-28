@@ -14,7 +14,8 @@ export const FlexScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        flexDirection: 'row-reverse',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
         backgroundColor: '#29C4D9'
     },
     caja1: {
