@@ -15,12 +15,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#28425B',
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center'
     },
     cajaMorada: {
-        position: 'relative',
-        bottom: -100,
         width: 100,
         height: 100,
         borderWidth: 10,
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
     },
     cajaNaranja: {
         position: 'relative',
-        right: -100,
+        bottom: -50,
         width: 100,
         height: 100,
         borderWidth: 10,
