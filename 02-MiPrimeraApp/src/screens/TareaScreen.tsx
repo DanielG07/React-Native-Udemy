@@ -14,7 +14,8 @@ export const TareaScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#28425B'
+        backgroundColor: '#28425B',
+        justifyContent: 'center'
     },
     cajaMorada: {
         width: 100,
@@ -24,7 +25,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#5856D6'
     },
     cajaNaranja: {
-        flex: 1,
         width: 100,
         height: 100,
         borderWidth: 10,
@@ -32,8 +32,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#F0A23B'
     },
     cajaAzul: {
-        width: 100,
+       
         height: 100,
+        alignSelf: 'stretch',
         borderWidth: 10,
         borderColor: 'white',
         backgroundColor: '#28C4D9'
