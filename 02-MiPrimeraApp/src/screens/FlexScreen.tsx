@@ -22,12 +22,14 @@ const styles = StyleSheet.create({
     caja1: {
         borderWidth: 2,
         borderColor: 'white',
-        fontSize: 30
+        fontSize: 30,
+        alignSelf: 'flex-start'
     },
     caja2: {
         borderWidth: 2,
         borderColor: 'white',
-        fontSize: 30
+        fontSize: 30,
+        alignSelf: 'center'
     },
     caja3: {
         borderWidth: 2,
