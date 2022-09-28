@@ -19,6 +19,8 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     cajaMorada: {
+        position: 'relative',
+        bottom: -100,
         width: 100,
         height: 100,
         borderWidth: 10,
