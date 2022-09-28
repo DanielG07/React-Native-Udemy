@@ -15,23 +15,22 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#28425B',
-        flexDirection: 'row',
         justifyContent: 'space-between'
     },
     cajaMorada: {
-        width: 100,
+        flex: 1,
         borderWidth: 10,
         borderColor: 'white',
         backgroundColor: '#5856D6'
     },
     cajaNaranja: {
-        width: 100,
+        flex: 1,
         borderWidth: 10,
         borderColor: 'white',
         backgroundColor: '#F0A23B'
     },
     cajaAzul: {
-        width: 100,
+        flex: 2,
         borderWidth: 10,
         borderColor: 'white',
         backgroundColor: '#28C4D9'
