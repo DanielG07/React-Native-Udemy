@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     cajaMorada: {
         width: 100,
         height: 100,
+        alignSelf: 'flex-end',
         borderWidth: 10,
         borderColor: 'white',
         backgroundColor: '#5856D6'
@@ -32,9 +33,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#F0A23B'
     },
     cajaAzul: {
-       
+        width: 100,
         height: 100,
-        alignSelf: 'stretch',
+        alignSelf: 'center',
         borderWidth: 10,
         borderColor: 'white',
         backgroundColor: '#28C4D9'
