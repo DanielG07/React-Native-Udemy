@@ -4,21 +4,8 @@ import { Image, Text, useWindowDimensions, View, TouchableOpacity } from 'react-
 import { SettingsScreen } from '../screens/SettingsScreen';
 import { StackNavigator } from './StackNavigator';
 import { styles } from '../theme/appTheme';
-import { createStackNavigator } from '@react-navigation/stack';
 
 const Drawer = createDrawerNavigator();
-
-const Stack = createStackNavigator();
-const SettingsStackScreen = () => {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name='SettingScreen'
-        component={ SettingsScreen }
-      />
-    </Stack.Navigator>
-  )
-}
 
 export const MenuLateral = () => {
 
@@ -34,7 +21,7 @@ export const MenuLateral = () => {
         drawerContent={ (props) => <MenuInterno {...props}/>}
     >
       <Drawer.Screen name="StackNavigator" component={ StackNavigator } />
-      <Drawer.Screen name="SettingScreen" component={ SettingsStackScreen } />
+      <Drawer.Screen name="SettingScreen" component={ SettingsScreen } />
     </Drawer.Navigator>
   );
 }

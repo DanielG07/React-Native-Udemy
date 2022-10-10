@@ -27,14 +27,19 @@ export const Pagina1Screen = ( {navigation}: Props) => {
         >
             <Text
                 style={styles.title}
-            > Pagina 1 Screen </Text>
+            >Pagina 1 Screen</Text>
 
             <Button
                 title='Ir pagina 2'
                 onPress={() => navigation.navigate('Pagina2Screen')}
                 />
 
-            <Text>
+            <Text
+                style={{
+                    marginVertical: 16,
+                    fontSize: 20
+                }}
+            >
                 Navegar con argumentos
             </Text>
 
