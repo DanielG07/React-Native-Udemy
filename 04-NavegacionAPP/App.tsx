@@ -14,6 +14,7 @@ const App = () => {
       {/* <StackNavigator /> */}
       {/* <MenuLateralBasico/> */}
       <MenuLateral/>
+      {/* <Tabs/> */}
     </NavigationContainer>
     
   )
