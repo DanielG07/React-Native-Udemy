@@ -1,42 +1,49 @@
 import React, { createContext, useReducer } from "react"
 import { authReducer } from "./authReducer"
 
-// Definir información que vamos a manejar
 export interface AuthState {
     isLoggedIn: boolean,
     username?: string,
     favoriteIcon?: string
 }
 
-// Estado inicial
 export const authInitialState : AuthState = {
     isLoggedIn: false,
     username: undefined,
     favoriteIcon: undefined
 }
 
-// Lo usaremos para decirle a React como luce y qué expone el context
 export interface AuthContextProps {
     authState: AuthState,
-    signIn: () => void
-}
+    signIn: () => void,
+    changeFavIcon: (iconName: string) => void,
+    logOut: () => void
+ }
 
-// Crear contexto
 export const AuthContext = createContext({} as AuthContextProps)
 
-// Componente que es el proveedor del estado
 export const AuthProvider = ({ children }: any) => {
 
     const [authState, dispatch] = useReducer(authReducer, authInitialState)
     const signIn = () => {
         dispatch({type: 'signIn'})
     }
+    const changeFavIcon = (iconName: string) => {
+        dispatch({type: 'changeFavIcon', payload: iconName})
+    }
+
+    const logOut = () => {
+        dispatch({type: 'logOut'})
+    }
     
     return (
         <AuthContext.Provider
             value={{
                 authState: authState,
-                signIn: signIn
+                signIn: signIn,
+                changeFavIcon: changeFavIcon,
+                logOut: logOut
+                
             }}
         >
             {children}
