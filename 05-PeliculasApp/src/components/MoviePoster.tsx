@@ -1,20 +1,23 @@
-import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Image, StyleSheet, View } from 'react-native';
 import { Movie } from '../interfaces/movieInterface';
 
 interface Props {
-    movie: Movie
+    movie: Movie,
+    width: number,
+    height: number
 }
 
-export const MoviePoster = ({movie}: Props) => {
+export const MoviePoster = ({movie, width, height}: Props) => {
 
     const uri = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
 
     return (
         <View
             style={{
-                width: 300,
-                height: 420,
+                width: width,
+                height: height,
+                marginHorizontal: 5
             }}
         >
             <View style={styles.imageContainer}>
@@ -33,7 +36,7 @@ export const MoviePoster = ({movie}: Props) => {
 const styles = StyleSheet.create({
     image: {
         flex: 1,
-        borderRadius: 15,
+        borderRadius: 15
     },
     imageContainer: {
         flex: 1,
@@ -46,6 +49,6 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
 
-        elevation: 10,
+        elevation: 5
     }
 })
